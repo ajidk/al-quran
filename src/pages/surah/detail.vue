@@ -1,15 +1,35 @@
 <template>
-  <!-- <div>
-    <div>{{ nama_latin }}</div>
-  </div> -->
-  <div class="arab text-center pt-4" v-if="this.$route.params.id !== '1'">
+  <div class="flex py-3 items-center justify-between bg-[#CE7777] sticky top-0 text-white">
+    <div class="flex justify-between max-w-6xl items-center w-full mx-auto">
+      <div class="flex items-center gap-x-3">
+        <router-link :to="{ name: 'surah' }">
+          <img alt="back icon" src="../../assets/img/back.png" />
+        </router-link>
+      </div>
+      <div class="text-center flex-1">
+        <div>{{ nama_latin }}</div>
+        <div class="text-xs">{{ arti }}</div>
+      </div>
+      <!-- <div class="cursor-pointer">
+        <img alt="back icon" src="../../assets/img/option.png" />
+      </div> -->
+    </div>
+  </div>
+  <div class="arab text-center pt-4 text-[#8B7E74]" v-if="this.$route.params.id !== '1'">
     بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ
   </div>
-  <div class="main-detail m-5" v-for="(ayat, index) in ayats" :key="index">
-    <div class="flex-1 py-1">
-      <div class="text-right text-3xl mt-2 arab">{{ ayat.ar }}</div>
-      <div class="text-left">{{ ayat.nomor }}. {{ ayat.idn }}</div>
+  <div v-if="status === 200" class="text-[#8B7E74]">
+    <div class="main-detail m-5" v-for="(ayat, index) in ayats" :key="index">
+      <div class="flex-1 py-1">
+        <div class="text-right text-3xl mt-2 arab">{{ ayat.ar }}</div>
+        <div class="text-left">{{ ayat.nomor }}. {{ ayat.idn }}</div>
+      </div>
     </div>
+  </div>
+  <div v-else class="flex justify-center items-center h-screen">Not found</div>
+
+  <div class="text-center bg-white py-2 mt-auto text-sm text-[#8B7E74]">
+    © 2022 - ALL RIGHTS RESERVED - MUSHAF AL-QUR'AN
   </div>
 </template>
 
@@ -24,10 +44,11 @@ export default {
       arti: '',
       nama: '',
       deskripsi: '',
-      jumlah_ayat: 0,
-      nama_latin: 0,
+      jumlah_ayat: '',
+      nama_latin: '',
       tempat_turun: '',
       audio: '',
+      status: '',
     };
   },
   methods: {
@@ -41,7 +62,8 @@ export default {
         this.nama_latin = response.data.nama_latin;
         this.tempat_turun = response.data.tempat_turun;
         this.audio = response.data.audio;
-        console.log(response.data);
+        this.status = response.status;
+        // console.log(response);
       });
     },
   },

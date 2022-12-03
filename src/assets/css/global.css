@@ -1,5 +1,9 @@
+.main {
+    @apply grid grid-cols-1 md:grid-cols-3 items-center gap-2 md:gap-5 container mx-auto max-w-6xl
+}
+
 .main-box {
-    @apply px-4 py-3 border-b flex justify-between items-center hover:shadow-xl cursor-pointer rounded-lg hover:px-6 hover:py-4;
+    @apply px-4 py-3 border-b flex justify-between items-center hover:md:shadow-xl cursor-pointer rounded-lg hover:md:px-5;
 }
 
 .main-detail {
