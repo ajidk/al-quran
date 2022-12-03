@@ -1,0 +1,13 @@
+@font-face {
+    font-family: fontArab;
+    src: url('../../assets/font/LPMQ.ttf');
+}
+
+.arab {
+    font-family: fontArab;
+    font-size: 1.8rem;
+    line-height: 65px;
+    margin-top: 5px;
+    margin-right: 0;
+    direction: rtl;
+}

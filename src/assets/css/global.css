@@ -1,0 +1,7 @@
+.main-box {
+    @apply px-4 py-3 border-b flex justify-between items-center hover:shadow-xl cursor-pointer rounded-lg hover:px-6 hover:py-4;
+}
+
+.main-detail {
+    @apply flex flex-row items-center bg-[F6F6F7] gap-x-4 border-b px-4 container max-w-6xl mx-auto py-3;
+}

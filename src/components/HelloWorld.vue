@@ -32,11 +32,20 @@
 
 <script>
 export default {
+  data() {
+    return {
+      count: 1,
+    };
+  },
+  mounted() {
+    console.log(this.count);
+    this.count = 3;
+  },
   name: 'HelloWorld',
   props: {
-    msg: String
-  }
-}
+    msg: String,
+  },
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
