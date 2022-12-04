@@ -15,10 +15,7 @@
       </div> -->
     </div>
   </div>
-  <div
-    class="arab text-center py-2 text-[#8B7E74] border-b"
-    v-if="this.$route.params.id !== '1'"
-  >
+  <div class="arab text-center py-2 text-[#8B7E74] border-b" v-if="this.$route.params.id !== '1'">
     بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ
   </div>
   <div v-if="status === 200" class="text-[#8B7E74]">
@@ -32,7 +29,8 @@
   <div v-else class="flex justify-center items-center h-screen">Not found</div>
 
   <div class="text-center bg-white py-2 mt-auto text-sm text-[#8B7E74]">
-    © 2022 - ALL RIGHTS RESERVED <br /> MUSHAF AL-QUR'AN
+    © 2022 - ALL RIGHTS RESERVED <br />
+    MUSHAF AL-QUR'AN
   </div>
 </template>
 
@@ -66,7 +64,7 @@ export default {
         this.tempat_turun = response.data.tempat_turun;
         this.audio = response.data.audio;
         this.status = response.status;
-        // console.log(response);
+        console.log(response.data.ayat);
       });
     },
   },
