@@ -1,21 +1,24 @@
 <template>
-  <div class="flex py-3 items-center justify-between bg-[#CE7777] sticky top-0 text-white">
-    <div class="flex justify-between max-w-6xl items-center w-full mx-auto">
+  <div class="flex py-4 items-center justify-between bg-[#CE7777] sticky top-0 text-white">
+    <div class="flex justify-between max-w-6xl items-center w-full mx-auto px-4">
       <div class="flex items-center gap-x-3">
         <router-link :to="{ name: 'surah' }">
           <img alt="back icon" src="../../assets/img/back.png" />
         </router-link>
       </div>
-      <div class="text-center flex-1">
+      <div class="text-center absolute left-0 right-0">
         <div>{{ nama_latin }}</div>
         <div class="text-xs">{{ arti }}</div>
       </div>
-      <!-- <div class="cursor-pointer">
+      <!-- <div class="cursor-pointer z-10">
         <img alt="back icon" src="../../assets/img/option.png" />
       </div> -->
     </div>
   </div>
-  <div class="arab text-center pt-4 text-[#8B7E74]" v-if="this.$route.params.id !== '1'">
+  <div
+    class="arab text-center py-2 text-[#8B7E74] border-b"
+    v-if="this.$route.params.id !== '1'"
+  >
     بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ
   </div>
   <div v-if="status === 200" class="text-[#8B7E74]">
@@ -29,7 +32,7 @@
   <div v-else class="flex justify-center items-center h-screen">Not found</div>
 
   <div class="text-center bg-white py-2 mt-auto text-sm text-[#8B7E74]">
-    © 2022 - ALL RIGHTS RESERVED - MUSHAF AL-QUR'AN
+    © 2022 - ALL RIGHTS RESERVED <br /> MUSHAF AL-QUR'AN
   </div>
 </template>
 

@@ -1,13 +1,10 @@
 <template>
-  <div
-    class="bg-[#CE7777] text-white py-3 text-center text-xl font-bold"
-  >
-    Daftar
-  </div>
+  <div class="bg-[#CE7777] text-white py-3 text-center text-xl font-bold">Daftar</div>
   <!-- <div class="text-xl font-bold text-center py-4">Daftar Surah</div> -->
   <ListBox />
   <div class="text-center bg-white py-2 mt-auto text-sm">
-    © 2022 - ALL RIGHTS RESERVED - MUSHAF AL-QUR'AN
+    © 2022 - ALL RIGHTS RESERVED <br />
+    MUSHAF AL-QUR'AN
   </div>
 </template>
 
