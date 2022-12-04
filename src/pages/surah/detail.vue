@@ -1,7 +1,7 @@
 <template>
   <div class="flex py-4 items-center justify-between bg-[#CE7777] sticky top-0 text-white">
     <div class="flex justify-between max-w-6xl items-center w-full mx-auto px-4">
-      <div class="flex items-center gap-x-3">
+      <div class="flex items-center gap-x-3 z-10">
         <router-link :to="{ name: 'surah' }">
           <img alt="back icon" src="../../assets/img/back.png" />
         </router-link>
